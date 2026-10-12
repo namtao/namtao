@@ -12,9 +12,7 @@
 I'm Nam. I build practical software: automation bots, internal tools and small products that save people time. I care about systems that are simple to run and honest about their trade-offs.
 
 - 🛠️ Building **[Retec](https://retec.vn/)**, smart tools for everyday work, starting with Vietnamese-aware OCR.
-- 📚 Writing a **[handbook on distributed systems](https://github.com/namtao/distributed-systems-handbook)**, from database internals to system design.
 - 🤖 Automating the boring parts with Python, Node.js and LLMs.
-- 🇻🇳 Writing in Vietnamese and English.
 
 ---
 
