@@ -1,10 +1,13 @@
-<img src="assets/banner.svg" alt="Hi, I'm Nam, building Retec: smart tools for everyday work" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner.svg" />
+  <img src="assets/banner.svg" alt="Hi, I'm Nam, building Retec: smart tools for everyday work" width="100%" />
+</picture>
 
 <p align="center">
   <a href="https://retec.vn/"><img src="https://img.shields.io/badge/Retec-retec.vn-FF6B47?style=flat-square&logo=googlechrome&logoColor=white" alt="Retec" /></a>
   <a href="https://namtao.github.io/"><img src="https://img.shields.io/badge/Blog-namtao.github.io-14171F?style=flat-square&logo=githubpages&logoColor=white" alt="Blog" /></a>
   <img src="https://img.shields.io/badge/Based%20in-Vietnam-da251d?style=flat-square" alt="Vietnam" />
-  <img src="https://komarev.com/ghpvc/?username=namtao&label=Profile%20views&color=21C7A8&style=flat-square" alt="Profile views" />
 </p>
 
 ## 👋 About me

@@ -2,7 +2,7 @@
 
 Edit LINES below, then run from the repo root:
 
-    python3 scripts/make-banner.py            # writes assets/banner.svg
+    python3 scripts/make-banner.py     # writes assets/banner.svg and assets/banner-dark.svg
 
 Fonts are fetched from Google Fonts as subsets containing only the glyphs used,
 then embedded, so the SVG renders in the brand fonts without external requests.
@@ -14,9 +14,13 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / "assets" / "banner.svg"
+OUT_DIR = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / "assets"
 
-BG, INK, INK2 = "#F7F6F2", "#14171F", "#4B4F58"
+# file name -> (background, ink, secondary ink); dark mirrors the Retec favicon (light mark on ink)
+THEMES = {
+    "banner.svg": ("#F7F6F2", "#14171F", "#4B4F58"),
+    "banner-dark.svg": ("#14171F", "#F7F6F2", "#A9ADB5"),
+}
 CORAL, TEAL = "#FF6B47", "#21C7A8"
 
 # Each line is a list of (text, highlight) segments; highlights use the coral accent.
@@ -120,8 +124,10 @@ for i, segs in enumerate(LINES):
         f'    <rect id="k{i}" x="{X0 + 2}" y="{Y - 19}" width="2.5" height="25" rx="1" fill="{CORAL}"{cur_attr}/>'
     )
 
-# Retec wordmark, copied from retec.vn/shared/retec-wordmark.svg
-WORDMARK = f'''<svg x="858" y="92" width="262" height="75" viewBox="8 0 230 66" fill="none">
+
+def render(BG, INK, INK2):
+    # Retec wordmark, copied from retec.vn/shared/retec-wordmark.svg
+    WORDMARK = f'''<svg x="858" y="92" width="262" height="75" viewBox="8 0 230 66" fill="none">
     <g stroke="{INK}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
       <path d="M14 60V38A18 18 0 0 1 32 20"/><path d="M48.0 40H89.0A20.5 20.5 0 1 0 83.73 53.72"/>
       <path d="M115 6V50A10 10 0 0 0 125 60M105 20H126"/><path d="M132.0 40H173.0A20.5 20.5 0 1 0 167.73 53.72"/>
@@ -130,7 +136,7 @@ WORDMARK = f'''<svg x="858" y="92" width="262" height="75" viewBox="8 0 230 66" 
     <circle cx="41.5" cy="19" r="5.5" fill="{CORAL}"/><circle cx="230" cy="40" r="5.5" fill="{TEAL}"/>
   </svg>'''
 
-svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="t">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="t">
   <title id="t">Hi, I'm Nam, building Retec: smart tools for everyday work</title>
   <style>
 {chr(10).join("    " + c for c in css)}
@@ -170,5 +176,8 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" view
   </g>
 </svg>
 '''
-OUT.write_text(svg)
-print(f"wrote {OUT}")
+
+for name, colours in THEMES.items():
+    out = OUT_DIR / name
+    out.write_text(render(*colours))
+    print(f"wrote {out}")
