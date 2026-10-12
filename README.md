@@ -44,6 +44,16 @@ I'm Nam. I build practical software: automation bots, internal tools and small p
 
 ---
 
+## 📈 Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/namtao/namtao/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/namtao/namtao/output/snake.svg" />
+  <img alt="Contribution graph eaten by a snake" src="https://raw.githubusercontent.com/namtao/namtao/output/snake.svg" width="100%" />
+</picture>
+
+---
+
 ## 💡 Open to
 
 - Collaborating on automation, OCR and developer tools.
