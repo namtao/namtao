@@ -14,7 +14,7 @@
 
 I'm Nam. I build practical software: automation bots, internal tools and small products that save people time. I care about systems that are simple to run and honest about their trade-offs.
 
-- 🛠️ Building **[Retec](https://retec.vn/)**, smart tools for everyday work, starting with Vietnamese-aware OCR.
+- 🛠️ Building **[Retec](https://retec.vn/)**, four live tools for everyday work: OCR, PHOTO, FEEDSIFT and JOBS.
 - 🤖 Automating the boring parts with Python, Node.js and LLMs.
 
 ---
@@ -40,8 +40,10 @@ I'm Nam. I build practical software: automation bots, internal tools and small p
 
 | Product | What it does | Status |
 |---|---|---|
-| **[OCR](https://ocr.retec.vn/)** | Turns images and PDFs into text. Reads Vietnamese, including handwriting and formulas, and exports to Word or two-layer PDF. | Live |
-| **PHOTO** | Edits text in photos and scans while keeping the original font, ink colour and layout. | Coming soon |
+| **[OCR](https://ocr.retec.vn/)** | Turns images and PDFs into text. Reads Vietnamese and English, including handwriting and formulas, extracts the fields you need, exports to Word or two-layer PDF and translates English ↔ Vietnamese. | Live |
+| **[PHOTO](https://photo.retec.vn/)** | Edits text in photos and scans while keeping the original font, ink colour and layout. | Live |
+| **[FEEDSIFT](https://feedsift.retec.vn/)** | Free, open-source browser extension that hides ads, videos and suggestions in Facebook and X feeds. | Live |
+| **[JOBS](https://jobs.retec.vn/)** | Search by job title or field and see listings from 14 Vietnamese job boards in one list. | Live |
 
 ---
 

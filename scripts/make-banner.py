@@ -27,8 +27,9 @@ CORAL, TEAL = "#FF6B47", "#21C7A8"
 LINES = [
     [("Building ", False), ("Retec", True), (": smart tools for everyday work", False)],
     [("OCR", True), (": Vietnamese text from images & PDFs", False)],
-    [("Reads handwriting and formulas too", False)],
-    [("PHOTO", True), (": edit text in photos, coming soon", False)],
+    [("PHOTO", True), (": edit text in photos, keep the font", False)],
+    [("FEEDSIFT", True), (": a cleaner Facebook & X feed", False)],
+    [("JOBS", True), (": 14 job boards, one search", False)],
 ]
 SLOT, TYPE, ERASE = 5.0, 1.6, 0.8
 T = SLOT * len(LINES) + TYPE            # extra TYPE so line 0 re-types after the last erase
